@@ -24,5 +24,9 @@ func main() {
 	r.Handle("DELETE", "/delete", func(context *gin.Context) {
 		context.String(200, "du=>delete")
 	})
+	//any的请求方法,里面有8种请求方法
+	r.Any("any", func(context *gin.Context) {
+		context.String(200, "du=>any")
+	})
 	r.Run()
 }
